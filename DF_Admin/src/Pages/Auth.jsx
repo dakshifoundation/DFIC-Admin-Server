@@ -25,7 +25,7 @@ const Auth = () => {
       switch (status) {
         case 400:
           setModalTitle("Bad Request");
-          setModalMessage("User Alreday Exists");
+          setModalMessage("Email already exists Or Unauthorized Email Domain.");
           break;
         case 401:
           setModalTitle("Unauthorized");
