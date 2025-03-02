@@ -55,6 +55,7 @@ app.use(cors({
 
 app.use(cookieParser())
 app.use(express.json())
+app.set('trust proxy', 1)
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'DF_Admin/dist')))
 
