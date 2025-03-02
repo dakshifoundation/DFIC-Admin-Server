@@ -1,0 +1,6 @@
+.env
+node_modules/
+DF_Admin/node_modules/
+DF_Admin/.gitignore
+logs/
+*.log

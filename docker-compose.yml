@@ -1,0 +1,26 @@
+services : 
+    app : 
+        build :   .
+        container_name: admin_server
+        env_file:
+            - .env
+        ports :
+            - "3000:3000"
+        depends_on :
+            - db
+        restart : unless-stopped
+    
+
+    # Currrently in no use.
+    
+    db : 
+        image: mongo
+        container_name: mongoDB
+        ports: 
+            - "27017:27017"
+        volumes:
+            - mongo-data:/data/db
+        restart: unless-stopped
+    
+volumes:
+    mongo-data:
